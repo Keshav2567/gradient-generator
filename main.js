@@ -1,11 +1,13 @@
 let range = document.getElementById('range');
 let right = document.querySelector('.right');
 
+//It'll get the value of the slider
 range.oninput = (() => {
 	let val = range.value;
 	right.innerHTML = val;
 })
 
+//Grabbing the text input tags
 let colorInputs = document.querySelector('.color-inputs');
 let inputHeading = document.getElementById('input-heading');
 let color1 = document.getElementById('color1');
@@ -27,6 +29,7 @@ degreeValue.style = 'display: none;';
 
 let outputCode = document.getElementById('outputCode');
 
+//It'll add the code to the 'code' tag
 function fillCode(code) {
 	outputCode.style = 'display: block;';
 	let codeTag = document.getElementById('code');
@@ -36,17 +39,16 @@ function fillCode(code) {
 let output = document.getElementById('output');
 
 let setBtn = document.getElementById('set');
-/*
-setBtn.addEventListener('click', () => {
-	output.style = `background-image: linear-gradient(${range.value}deg, ${color1.value}, ${color2.value});`
-})*/
-
+//Changing it's display to none by default
 setBtn.style = 'display: none;';
 
 
 let gradient;
 let select = document.getElementById('total-colors')
+
+//Whenever the value of select tag changes it'll run this piece of code
 select.addEventListener('change', () => {
+	
 	if (select.value == 'choose') {
 		color1.style = 'display: none;'
 		color2.style = 'display: none;'
@@ -72,9 +74,11 @@ select.addEventListener('change', () => {
 		setBtn.style = 'display: block;';
 
 		setBtn.addEventListener('click', () => {
+			//Apply the gradient to output box after clicking on the button
 			gradient = `background-image: linear-gradient(${range.value}deg, ${color1.value}, ${color2.value});`
 			output.style = gradient;
-
+			
+			//It'll fill the code to the 'code' tag
 			fillCode(gradient);
 		})
 	}
@@ -144,10 +148,10 @@ select.addEventListener('change', () => {
 	}
 })
 
-// Simple example, see optional options for more configuration.
+//Using the pickr.js library for color picker
 const pickr = Pickr.create({
 	el: '.color-picker',
-	theme: 'nano', // or 'monolith', or 'nano'
+	theme: 'nano', // or 'monolith', or 'classic'
 
 	components: {
 		// Main components
