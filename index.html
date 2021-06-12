@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML</title>
+	<!-- HTML -->
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css" /> <!-- 'nano' theme -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Gradient Generator</h1>
+		<div class="output-container">
+			<div id="output"></div>
+		</div>
+		<div id="color-picker-container">
+			<p class="select">Select Color:
+				<div class="color-picker"></div>
+		</div>
+		<div class="drop-down">
+			<h3>Select the number of colors: </h3>
+			<select name="total-colors" id="total-colors">
+				<option value="choose" selected>Choose</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+		</div>
+		<div class="color-inputs">
+			<h3 id="input-heading">Input Color Codes Here:</h3>
+			<form accept-charset="utf-8">
+				<input type="text" name="color1" class="color-input" id="color1" placeholder="Select the color from the color picker" />
+				<input type="text" name="color2" class="color-input" id="color2" placeholder="Select the color from the color picker" />
+				<input type="text" name="color3" class="color-input" id="color3" placeholder="Select the color from the color picker" />
+				<input type="text" name="color4" class="color-input" id="color4" placeholder="Select the color from the color picker" />
+				<input type="text" name="color5" class="color-input" id="color5" placeholder="Select the color from the color picker" />
+				<input type="text" name="color6" class="color-input" id="color6" placeholder="Select the color from the color picker" />
+			</form>
+		</div>
+		<div class="degree-value">
+			<h3>Select The Degree Of Angle:</h3>
+			<div class="slider">
+				<div class="left">
+					0
+				</div>
+				<input type="range" name="range" id="range" value="0" min="0" max="360" step="1" />
+				<div class="right">0</div>
+			</div>
+		</div>
+		<div class="buttonDiv">
+			<button class="btn" id="set">Set</button>
+		</div>
+		<div id="outputCode">
+			<pre>
+				<code id="code" class="language-css">
+				</code>
+			</pre>
+		</div>
+		<script src="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+		<script src="main.js"></script>
+</body>
+
+</html>
