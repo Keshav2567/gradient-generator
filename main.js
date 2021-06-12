@@ -90,6 +90,8 @@ select.addEventListener('change', () => {
 		color5.style = 'display: none;';
 		color6.style = 'display: none;';
 		inputHeading.style = 'visibility: visible;';
+		degreeValue.style = 'display: block;';
+		setBtn.style = 'display: block;';
 
 		setBtn.addEventListener('click', () => {
 			gradient = `background-image: linear-gradient(${range.value}deg, ${color1.value}, ${color2.value}, ${color3.value});`
@@ -106,6 +108,8 @@ select.addEventListener('change', () => {
 		color5.style = 'display: none;';
 		color6.style = 'display: none;';
 		inputHeading.style = 'visibility: visible;';
+		degreeValue.style = 'display: block;';
+		setBtn.style = 'display: block;';
 
 		setBtn.addEventListener('click', () => {
 			gradient = `background-image: linear-gradient(${range.value}deg, ${color1.value}, ${color2.value}, ${color3.value}, ${color4.value});`
@@ -122,6 +126,8 @@ select.addEventListener('change', () => {
 		color5.style = 'display: block;';
 		color6.style = 'display: none;';
 		inputHeading.style = 'visibility: visible;';
+		degreeValue.style = 'display: block;';
+		setBtn.style = 'display: block;';
 
 		setBtn.addEventListener('click', () => {
 			gradient = `background-image: linear-gradient(${range.value}deg, ${color1.value}, ${color2.value}, ${color3.value}, ${color4.value}, ${color5.value});`
@@ -138,6 +144,8 @@ select.addEventListener('change', () => {
 		color5.style = 'display: block;';
 		color6.style = 'display: block;';
 		inputHeading.style = 'visibility: visible;';
+		degreeValue.style = 'display: block;';
+		setBtn.style = 'display: block;';
 
 		setBtn.addEventListener('click', () => {
 			gradient = `background-image: linear-gradient(${range.value}deg, ${color1.value}, ${color2.value}, ${color3.value}, ${color4.value}, ${color5.value}, ${color6.value});`
